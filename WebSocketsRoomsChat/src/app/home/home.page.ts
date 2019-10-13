@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Socket } from "ngx-socket-io";
+import { ToastController } from "@ionic/angular";
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +10,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private socket: Socket, private toastCtrl: ToastController) { }
+
+  ngOnInit() {
+    this.socket.connect()
+  }
 
 }
