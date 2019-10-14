@@ -7,8 +7,18 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <div class="chat-container">
+    <div class="messages">
+      <p class="message" *ngFor="let message of messages">
+        {{message}}
+      </p>
+    </div>
+    <div class="form">
+      <label for="">nick</label>
+      <input type="text">
+      <label for="">mssg</label>
+      <input type="text" [(ngModel)]="inputMessage">
+      <button (click)="sendMessage()">send</button>
+    </div>
   </div>
 </ion-content>

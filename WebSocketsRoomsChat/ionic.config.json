@@ -1,5 +1,7 @@
 {
   "name": "WebSocketsRoomsChat",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
